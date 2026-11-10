@@ -1,0 +1,76 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files — local secrets must NEVER be committed (see docs/LOCAL_SETUP.md)
+.env
+.env.*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+local-*
+.claude
+.z-ai-config
+*.log
+dev.log
+dev.out.log
+test
+prompt
+server.log
+
+# Skills directory
+/skills/
+
+# ---------------------------------------------------------------------------
+# SS Consultancy migration — sensitive source material.
+# These hold PII (owner names, phones, emails, enquiries), credentials
+# (legacy Web.config connection string) and the original SQL dump / site
+# backup. They must exist ONLY as untracked local files.
+# ---------------------------------------------------------------------------
+/upload/
+/legacy-source/website/
+/legacy-source/db_export_utf8.sql
+/db/
+/data/images/
+/data/exports/
+/tool-results/
+
+# runtime data produced by the importer (manifests, fixtures are tracked)
+/data/*.local.json
+storage/images/
+
+# runtime artifacts (daemon logs, verification screenshots)
+/data/
